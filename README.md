@@ -1,6 +1,21 @@
 # HandUMI Quest App v0.2.1
 
-HandUMI Quest App is a reconstruction of YubiQuestApp based on its `.apk`.
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License: Apache 2.0"></a>
+  <a href="https://github.com/murobotics-ai/handumi-hw"><img src="https://img.shields.io/badge/Hardware-handumi--hw-4c8bf5.svg" alt="HandUMI hardware"></a>
+  <a href="https://github.com/murobotics-ai/handumi-sw"><img src="https://img.shields.io/badge/Software-handumi--sw-4c8bf5.svg" alt="HandUMI software"></a>
+  <a href="https://murobotics-ai.github.io/handumi-sw/"><img src="https://img.shields.io/badge/Docs-GitHub_Pages-AF0000.svg" alt="HandUMI documentation on GitHub Pages"></a>
+  <a href="https://murobotics.ai/research/handumi"><img src="https://img.shields.io/badge/Project-Website-222222.svg" alt="HandUMI project website"></a>
+</p>
+
+HandUMI Quest App is the Meta Quest 3/3S tracking client for
+[HandUMI](https://github.com/murobotics-ai/handumi-hw). It streams
+timestamped 6-DoF controller poses over TCP to the
+[HandUMI software](https://github.com/murobotics-ai/handumi-sw), which
+records them alongside the wrist cameras and gripper encoders. PICO 4 Ultra
+headsets use XRoboToolkit instead and do not need this app.
+
+The app is a reconstruction of YubiQuestApp based on its `.apk`.
 
 ## Important limitation
 
@@ -94,12 +109,41 @@ behavioral parity on Quest hardware. Follow
 `docs/quest-hardware-validation.md` before treating this APK as a replacement
 for data collection.
 
+## License
+
+The HandUMI Quest App code is licensed under the [Apache License 2.0](LICENSE).
+Material extracted from the YubiQuestApp APK, including everything under
+`evidence/`, is excluded from that grant; see [NOTICE](NOTICE) for details.
+
+## Citation
+
+If you use HandUMI, please cite:
+
+```bibtex
+@misc{meza2026handumi,
+  title  = {{HandUMI}: A Modular Hand-Worn Parallel-Jaw Interface for
+            Robot-Free Bimanual Data Capture},
+  author = {Meza, Brik and Perez, Leonardo and Mendoza, Alvaro and
+            Ubillus, Aniela and Ramos, Mitshell and Bastidas, Raul and
+            Olivera, Mauricio and Bastidas, Bryan},
+  year   = {2026},
+  url    = {https://murobotics.ai/research/handumi}
+}
+```
+
 ## References and Acknowledgments
 
-- UMI: Chi et al., "Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots," RSS 2024. Project · Paper
-- YUBI: Ohkawa et al., "YUBI: Yielding Universal Bidigital Interface for Bimanual Dexterous Manipulation at Scale," 2026. Project · Paper · Software
-- Meta Quest support uses YubiQuestApp and adapts the yubi-sw protocol and coordinate conversion. PICO support uses XRoboToolkit.
-- Core software: LeRobot, PyRoki, Viser, Rerun, and MuJoCo.
-- Robot assets: Almond Axol and AgileX Piper ROS, both MIT.
+- UMI: Chi et al., "Universal Manipulation Interface: In-The-Wild Robot
+  Teaching Without In-The-Wild Robots," RSS 2024.
+  [Project](https://umi-gripper.github.io/) ·
+  [Paper](https://www.roboticsproceedings.org/rss20/p045.html)
+- YUBI: Ohkawa et al., "YUBI: Yielding Universal Bidigital Interface for
+  Bimanual Dexterous Manipulation at Scale," 2026.
+  [Project](https://yubi.airoa.io/) ·
+  [Paper](https://arxiv.org/abs/2606.10244) ·
+  [Software](https://github.com/airoa-org/yubi-sw)
+- This app reconstructs YubiQuestApp and keeps the yubi-sw wire protocol and
+  coordinate conversion. PICO support in HandUMI uses
+  [XRoboToolkit](https://github.com/XR-Robotics).
 
 HandUMI is not affiliated with or endorsed by Meta, PICO, AgileX, AIRoA/YUBI, Almond, or Hugging Face. All trademarks belong to their respective owners.

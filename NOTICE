@@ -1,0 +1,30 @@
+HandUMI Quest App
+Copyright 2026 BrikHMP18 and the HandUMI contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE),
+subject to the exceptions below.
+
+Reconstruction notice
+---------------------
+HandUMI Quest App is an independent, best-effort behavioral reconstruction of
+YubiQuestApp, the Meta Quest client distributed as an APK by AIRoA for YUBI
+(https://github.com/airoa-org/yubi-sw). It is not the original AIRoA source
+and is not affiliated with or endorsed by AIRoA. The YUBI ROS bridge it is
+compatible with is published by AIRoA under the Apache License 2.0; the
+original Quest app source is unpublished and its license is not stated.
+
+Excluded from the Apache License grant
+--------------------------------------
+The files under evidence/ are analysis artifacts extracted from the
+YubiQuestApp APK (decoded manifest, IL2CPP metadata, method address maps and
+disassembly). They are provided only to document how the reconstruction was
+derived. HandUMI does not claim copyright in, and does not license, material
+that originates from the APK; any rights in it remain with their owners.
+Names, constants and protocol elements marked CONFIRMED in the source
+comments were recovered from the APK for interoperability.
+
+Third-party components
+----------------------
+This project depends on Unity, the Meta XR SDK and Android tooling, which are
+fetched through Packages/manifest.json and remain under their own licenses.
+Meta Quest is a trademark of Meta Platforms, Inc.
